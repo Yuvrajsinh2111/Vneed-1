@@ -25,7 +25,7 @@ export const getLandingPageData = async () => {
       })
       .catch(function (error) {
         console.log(error);
-      });
+      }) as any;
 
     return response.data.response;
   } catch {}
