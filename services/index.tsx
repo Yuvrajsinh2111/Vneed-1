@@ -6,8 +6,6 @@ export const getLandingPageData = async () => {
       method: "post",
       url: "http://143.110.181.77:9044/site/landing/landingdata",
       headers: {
-        Accept: "application/json, text/plain, */*",
-        "Accept-Language": "en-US,en;q=0.9",
         Connection: "keep-alive",
         "Content-Length": "0",
         Cookie:
