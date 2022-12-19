@@ -19,13 +19,13 @@ export const getLandingPageData = async () => {
       },
     };
 
-    const response = await axios(config)
+    const response = (await axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
       })
       .catch(function (error) {
         console.log(error);
-      }) as any;
+      })) as any;
 
     return response.data.response;
   } catch {}
