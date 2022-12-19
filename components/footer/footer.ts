@@ -50,5 +50,10 @@ export const copyright = css({
 });
 
 export const company = css({
-  marginLeft: "10px",
+  marginLeft: "80px",
+});
+
+export const mobcompany = css({
+  marginLeft: "0px",
+  justifyContent: "center",
 });

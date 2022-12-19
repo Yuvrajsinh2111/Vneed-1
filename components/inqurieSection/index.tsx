@@ -1,11 +1,4 @@
-import {
-  Container,
-  Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  useMediaQuery,
-} from "@mui/material";
+import { Container, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 import { question } from "../accordion/question";
 import YoutubeSection from "../youtube-section";
@@ -13,7 +6,7 @@ import { blockSection, youtubeSection } from "../youtube-section/yotube";
 import { appimage, block, reachout, reachouttext } from "./inquire";
 
 export const InquriesSection = ({ inquriedata }: any) => {
-  const mobileMedia = useMediaQuery("(max-width:1024px)");
+  const mobileMedia = useMediaQuery("(max-width:768px)");
 
   const data = inquriedata?.PostHeader[5];
 

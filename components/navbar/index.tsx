@@ -1,25 +1,14 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  IconButton,
-  MenuItem,
-  Select,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
-import { log } from "console";
+import { Button, MenuItem, Select, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import { authSection, navSection, select } from "./nav";
 import { navItemsData } from "./NavItems";
 
 const Navbar = () => {
-  const [selectedLan, setSelectedLan] = useState<string>("en");
+  const [selectedLang, setSelectedLang] = useState<string>("en");
   const handleChange = (e: any) => {
-    setSelectedLan(e.target.value);
+    setSelectedLang(e.target.value);
   };
-  const mobileMedia = useMediaQuery("(max-width:1024px)");
+  const mobileMedia = useMediaQuery("(max-width:768px)");
 
   return mobileMedia ? (
     <nav className={navSection}>
@@ -37,7 +26,7 @@ const Navbar = () => {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={selectedLan}
+          value={selectedLang}
           label="language"
           onChange={handleChange}
           color="primary"

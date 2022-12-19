@@ -1,25 +1,18 @@
-import {
-  Button,
-  Card,
-  Container,
-  TextField,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Button, TextField, Typography, useMediaQuery } from "@mui/material";
+
 import React from "react";
+import ReactGoogleAutocomplete from "react-google-autocomplete";
 import {
   cardSection,
   hero,
-  homeHeader,
   locationField,
-  subText,
   location,
   businessbtn,
   cardSectionMobile,
 } from "./hero";
 
 export const Hero = ({ heroData }: any) => {
-  const mobileMedia = useMediaQuery("(max-width:1024px)");
+  const mobileMedia = useMediaQuery("(max-width:768px)");
 
   const homeData = heroData?.PostHeader[0];
 
@@ -28,11 +21,12 @@ export const Hero = ({ heroData }: any) => {
       <div className={hero}>
         <div className={mobileMedia ? cardSectionMobile : cardSection}>
           <div className={location}>
-            <TextField
-              className={locationField}
-              name="location"
-              fullWidth
-              placeholder="Type delivery location"
+            <ReactGoogleAutocomplete
+              style={{ width: "600px", padding: "1rem" }}
+              apiKey={"AIzaSyAWVOnWoimw6ipE83KqJqDxuAwbvKuAurk"} //Got this key from Admin panel
+              onPlaceSelected={(place) => {
+                console.log(place);
+              }}
             />
             <Button className={businessbtn} variant="contained">
               Show Buisness

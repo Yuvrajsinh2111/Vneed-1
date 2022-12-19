@@ -16,13 +16,14 @@ import {
   footerAppImage,
   footerlink,
   footerSection,
+  mobcompany,
   Mobilesection,
   section,
 } from "./footer";
 
 export const Footer = () => {
   const label = navItemsData;
-  const mobileMedia = useMediaQuery("(max-width:1024px)");
+  const mobileMedia = useMediaQuery("(max-width:768px)");
 
   return (
     <>
@@ -80,7 +81,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className={company}>
+          <div className={mobileMedia ? mobcompany : company}>
             <div>
               <Typography variant="h5" color="white" fontWeight="600">
                 Company

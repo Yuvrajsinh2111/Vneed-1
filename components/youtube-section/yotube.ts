@@ -19,3 +19,8 @@ export const blockSection = css({
 export const aboutVneed = css({
   padding: "50px",
 });
+
+export const yvideo = css({
+  display: "flex",
+  justifyContent: "center",
+});

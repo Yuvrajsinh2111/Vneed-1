@@ -4,7 +4,7 @@ import React from "react";
 import { cover, handscan, handscanMobile, qrtext } from "./qrscanner";
 
 export const QrSection = () => {
-  const mobileMedia = useMediaQuery("(max-width:1024px)");
+  const mobileMedia = useMediaQuery("(max-width:768px)");
   return (
     <>
       <div className={cover}>
@@ -14,7 +14,6 @@ export const QrSection = () => {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            // spacing={3}
             display="flex"
           >
             <Grid item xs={2} justifyContent="center" alignContent="center">
@@ -56,7 +55,6 @@ export const QrSection = () => {
           </Grid>
         </Container>
       </div>
-      ;
     </>
   );
 };

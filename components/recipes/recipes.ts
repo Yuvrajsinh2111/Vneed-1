@@ -7,7 +7,7 @@ export const recipesCard = css({
 
 export const recipesImage = css({
   display: "block",
-  maxWidth: "250px",
+  maxWidth: "230px",
   minHeight: "250px",
 });
 

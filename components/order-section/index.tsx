@@ -7,29 +7,26 @@ import {
   Grid,
 } from "@mui/material";
 import { Container } from "@mui/system";
-import { log } from "console";
-import { type } from "os";
 import React from "react";
-import { store } from "../store-section/store";
 import { order, orderCard, orderImage, orderText } from "./orderSection";
 
-const orderSectionData = [
-  {
-    img: "/images/bags.png",
-    title: "Unlimited Order",
-    desc: "Order food for a single person and also for group of persons",
-  },
-  {
-    img: "/images/iphone.png",
-    title: "Track Your Order Live ",
-    desc: "Track your order all the way from the restaurant to your doorstep",
-  },
-  {
-    img: "/images/manwithbox.png",
-    title: "Super Fast Delivery ",
-    desc: "Experience fast and fresh food delivery on-time to your doorstep",
-  },
-];
+// const orderSectionData = [
+//   {
+//     img: "/images/bags.png",
+//     title: "Unlimited Order",
+//     desc: "Order food for a single person and also for group of persons",
+//   },
+//   {
+//     img: "/images/iphone.png",
+//     title: "Track Your Order Live ",
+//     desc: "Track your order all the way from the restaurant to your doorstep",
+//   },
+//   {
+//     img: "/images/manwithbox.png",
+//     title: "Super Fast Delivery ",
+//     desc: "Experience fast and fresh food delivery on-time to your doorstep",
+//   },
+// ];
 
 export const OrederSection = ({ orderData }: any) => {
   const data: any = orderData?.PostHeader?.filter(

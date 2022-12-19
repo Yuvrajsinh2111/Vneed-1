@@ -1,4 +1,4 @@
-import { Box, Card, Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import {
   brandText,
   cardText,
@@ -6,7 +6,6 @@ import {
   headingSec,
   store,
   storesec,
-  str,
   vneedCard,
 } from "./store";
 

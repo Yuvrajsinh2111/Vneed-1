@@ -10,27 +10,39 @@ import {
   video,
   youtube,
   youtubeSection,
+  yvideo,
 } from "./yotube";
 
 export const YoutubeSection = () => {
-  const mobileMedia = useMediaQuery("(max-width:1024px)");
+  const mobileMedia = useMediaQuery("(max-width:768px)");
 
   return (
     <>
       <div className={youtube}>
         <Container>
           <div className={mobileMedia ? blockSection : youtubeSection}>
-            <div className="">
-              <iframe
-                width="520"
-                height="360"
-                src="https://www.youtube.com/embed/ZJKzmQBjJiA"
-                title="Our Happy Client | Client Review Video | Success Sensation"
-                // frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                // allowfullscreen
-              ></iframe>
-            </div>
+            {mobileMedia ? (
+              <div className={yvideo}>
+                <iframe
+                  width="200"
+                  height="360"
+                  src="https://www.youtube.com/embed/ZJKzmQBjJiA"
+                  title="Our Happy Client | Client Review Video | Success Sensation"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+              </div>
+            ) : (
+              <div>
+                <iframe
+                  width="520"
+                  height="360"
+                  src="https://www.youtube.com/embed/ZJKzmQBjJiA"
+                  title="Our Happy Client | Client Review Video | Success Sensation"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+              </div>
+            )}
+
             <div className={aboutVneed}>
               <div>
                 <Typography variant="h4" fontWeight="600">

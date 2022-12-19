@@ -9,23 +9,6 @@ export const hero = css({
   alignItems: "center",
 });
 
-export const subText = css({
-  display: "flex",
-  justifyContent: "center ",
-  margin: "10px 0 10px 0",
-});
-
-export const homeHeader = css({
-  position: "absolute",
-  width: "60px",
-  left: "20px",
-  bottom: "20rem",
-  display: "block",
-  backgroundColor: "#fff",
-  border: " 1px solid #ddd",
-  padding: "4rem",
-});
-
 export const cardSection = css({
   background: "white",
   width: "80%",

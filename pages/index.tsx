@@ -10,9 +10,10 @@ import InquriesSection from "../components/inqurieSection";
 import { useMediaQuery } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
 import { getLandingPageData } from "../services";
+import Head from "next/head";
 
 export default function Home() {
-  const mobileMedia = useMediaQuery("(max-width:1024px)");
+  const mobileMedia = useMediaQuery("(max-width:768px)");
 
   const [data, setData] = useState<any>();
 
@@ -37,7 +38,7 @@ export default function Home() {
         <QrSection />
         <OrederSection orderData={data} />
         <Recipes />
-        {!mobileMedia && <YoutubeSection />}
+        <YoutubeSection />
         <QuestionSection />
         <InquriesSection inquriedata={data} />
       </Layout>

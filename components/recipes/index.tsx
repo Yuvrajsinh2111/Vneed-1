@@ -1,8 +1,7 @@
 import { Card, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
-import { store, storeCard } from "../store-section/store";
-import { recipe, recipesCard, recipesImage, recipesText } from "./recipes";
+import { recipe, recipesImage, recipesText } from "./recipes";
 
 const recipes = [
   {
