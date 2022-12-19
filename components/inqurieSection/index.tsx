@@ -5,10 +5,10 @@ import YoutubeSection from "../youtube-section";
 import { blockSection, youtubeSection } from "../youtube-section/yotube";
 import { appimage, block, reachout, reachouttext } from "./inquire";
 
-export const InquriesSection = ({ inquriedata }: any) => {
+export const InquriesSection = () => {
   const mobileMedia = useMediaQuery("(max-width:768px)");
 
-  const data = inquriedata?.PostHeader[5];
+  // const data = inquriedata?.PostHeader[5];
 
   return (
     <>
@@ -17,9 +17,14 @@ export const InquriesSection = ({ inquriedata }: any) => {
           <div className={mobileMedia ? blockSection : youtubeSection}>
             <div className={reachouttext}>
               <Typography variant="h4" fontWeight="600">
-                {data?.title} {data?.name}
+                Let Us Reach You Closer
               </Typography>
-              <div>{data?.description}</div>
+              <div>
+                Satisfy your appetite with just a few taps on your phone’s
+                screen and we make sure that your first bite lasts longer. Go
+                for it and download our app Subscribe to our mailing list for
+                specials offers and hot deals
+              </div>
               <div className={mobileMedia ? block : reachout}>
                 <div>
                   <img className={appimage} src="/images/play.png" />

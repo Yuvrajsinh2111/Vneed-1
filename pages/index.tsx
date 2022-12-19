@@ -15,32 +15,32 @@ import Head from "next/head";
 export default function Home() {
   const mobileMedia = useMediaQuery("(max-width:768px)");
 
-  const [data, setData] = useState<any>();
+  // const [data, setData] = useState<any>();
 
-  const getData = useCallback(async () => {
-    try {
-      const getAPIData = await getLandingPageData();
-      setData(getAPIData[1]);
-    } catch {
-      //Error handling
-    }
-  }, []);
+  // const getData = useCallback(async () => {
+  //   try {
+  //     const getAPIData = await getLandingPageData();
+  //     setData(getAPIData[1]);
+  //   } catch {
+  //     //Error handling
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    getData();
-  }, [getData]);
+  // useEffect(() => {
+  //   getData();
+  // }, [getData]);
 
   return (
     <>
       <Layout>
-        <Hero heroData={data} />
+        <Hero />
         <StoreinArea />
         <QrSection />
-        <OrederSection orderData={data} />
+        <OrederSection />
         <Recipes />
         <YoutubeSection />
         <QuestionSection />
-        <InquriesSection inquriedata={data} />
+        <InquriesSection />
       </Layout>
     </>
   );

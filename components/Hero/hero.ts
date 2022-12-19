@@ -37,3 +37,11 @@ export const businessbtn = css({
   background: "black",
   height: "55px",
 });
+
+export const header = css({
+  marginTop: "50px",
+});
+
+export const subheader = css({
+  marginTop: "20px",
+});

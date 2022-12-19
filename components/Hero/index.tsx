@@ -9,12 +9,14 @@ import {
   location,
   businessbtn,
   cardSectionMobile,
+  header,
+  subheader,
 } from "./hero";
 
-export const Hero = ({ heroData }: any) => {
+export const Hero = () => {
   const mobileMedia = useMediaQuery("(max-width:768px)");
 
-  const homeData = heroData?.PostHeader[0];
+  // const homeData = heroData?.PostHeader[0];
 
   return (
     <>
@@ -38,16 +40,19 @@ export const Hero = ({ heroData }: any) => {
             display="flex"
             variant="h3"
             fontWeight="600"
+            className={header}
           >
-            {homeData?.name}
+            Consider Your Grocery Cravings Delivered!
           </Typography>
           <Typography
             textAlign="center"
             justifyContent="center"
             display="flex"
             variant="h6"
+            className={subheader}
           >
-            {homeData?.description}
+            Your Choice Of Grocery And Store, At Your Convenience Through The
+            Tap Of Your Mobile Phone
           </Typography>
         </div>
       </div>
