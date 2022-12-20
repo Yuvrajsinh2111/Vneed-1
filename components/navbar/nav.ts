@@ -15,3 +15,13 @@ export const authSection = css({
 export const select = css({
   color: "white",
 });
+
+export const appLogo = css({
+  minHeight: "100px",
+});
+
+export const logo = css({
+  top: "15px",
+  left: "25px",
+  position: "relative",
+});

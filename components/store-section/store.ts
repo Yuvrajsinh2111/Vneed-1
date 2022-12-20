@@ -16,31 +16,25 @@ export const storeCard = css({
 });
 
 export const cardText = css({
-  marginLeft: "0.5rem",
-});
-
-export const brandText = css({
-  color: "#585252",
-  fontSize: "1.5rem",
-  fontWeight: "600",
+  margin: "20px",
+  paddingLeft: "10px",
 });
 
 export const cirLogo = css({
+  padding: "10px",
   width: "70px",
-  height: "65px",
+  height: "80px",
   borderRadius: "50px",
   background: "#fff",
 });
 
 export const vneedCard = css({
-  justifyContent: "center",
-  padding: "1rem",
   display: "flex",
-  // minWidth: "350px",
-  marginBottom: "1rem",
+  width: "350px",
+  margin: "1rem",
   maxHeight: "100px",
   backgroundColor: "#fff",
-  boxShadow: "0 0 5px #d2cece82 ",
+  boxShadow: "0px 0px 30px #d2cece82 ",
   borderRadius: "6px",
   alignItems: "center",
 });

@@ -1,6 +1,6 @@
 import { Button, MenuItem, Select, useMediaQuery } from "@mui/material";
 import { useState } from "react";
-import { authSection, navSection, select } from "./nav";
+import { appLogo, authSection, logo, navSection, select } from "./nav";
 import { navItemsData } from "./NavItems";
 
 const Navbar = () => {
@@ -16,7 +16,16 @@ const Navbar = () => {
     </nav>
   ) : (
     <nav className={navSection}>
-      <img src="/images/VneedLogo.png" alt="logo" height="100" width="100" />
+      <div className={appLogo}>
+        <img
+          className={logo}
+          src="/images/VneedLogo.png"
+          alt="logo"
+          height="65"
+          width="80"
+        />
+      </div>
+
       <div>
         {navItemsData.map(({ title }) => (
           <Button sx={{ color: "#fff" }}>{title}</Button>

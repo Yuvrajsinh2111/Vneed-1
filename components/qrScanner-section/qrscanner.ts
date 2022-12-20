@@ -15,7 +15,7 @@ export const cover = css({
 
 export const handscan = css({
   display: "block",
-  maxWidth: "200px",
+  maxWidth: "150px",
   height: "auto",
 });
 

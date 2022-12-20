@@ -1,6 +1,5 @@
 import { Container, Grid, Typography } from "@mui/material";
 import {
-  brandText,
   cardText,
   cirLogo,
   headingSec,
@@ -61,7 +60,7 @@ export const StoreinArea = () => (
   <>
     <div className={store}>
       <div className={headingSec}>
-        <Typography textAlign="center" variant="h4">
+        <Typography textAlign="center" variant="h4" color="#585252">
           Choose your store in San Francisco Bay Area
         </Typography>
       </div>
@@ -89,11 +88,17 @@ export const StoreinArea = () => (
                         <img src="/images/costco-store.png"></img>
                       </div>
                       <div className={cardText}>
-                        <Typography variant="h6" className={brandText}>
+                        <Typography
+                          color="#585252"
+                          fontSize="20px"
+                          fontWeight="600"
+                        >
                           {companyName}
                         </Typography>
-                        <Typography>{type}</Typography>
-                        <Typography>{method}</Typography>
+                        <Typography color="#585252" fontSize="15px">
+                          {type}
+                        </Typography>
+                        <Typography fontSize="15px">{method}</Typography>
                       </div>
                     </div>
                   </Grid>

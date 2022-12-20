@@ -1,16 +1,22 @@
 import { Button, TextField, Typography, useMediaQuery } from "@mui/material";
+import { textAlign } from "@mui/system";
 
 import React from "react";
 import ReactGoogleAutocomplete from "react-google-autocomplete";
+import { block } from "../footer/footer";
 import {
   cardSection,
   hero,
-  locationField,
   location,
   businessbtn,
   cardSectionMobile,
   header,
   subheader,
+  locationIcon,
+  firstHeader,
+  titleOne,
+  mobHeader,
+  titleTwo,
 } from "./hero";
 
 export const Hero = () => {
@@ -24,26 +30,29 @@ export const Hero = () => {
         <div className={mobileMedia ? cardSectionMobile : cardSection}>
           <div className={location}>
             <ReactGoogleAutocomplete
-              style={{ width: "600px", padding: "1rem" }}
+              style={{ width: "600px", padding: "1rem", border: "none" }}
               apiKey={"AIzaSyAWVOnWoimw6ipE83KqJqDxuAwbvKuAurk"} //Got this key from Admin panel
               onPlaceSelected={(place) => {
                 console.log(place);
               }}
             />
-            <Button className={businessbtn} variant="contained">
-              Show Buisness
-            </Button>
+            <img
+              className={locationIcon}
+              src="/images/location.png"
+              alt="location-icon"
+            />
+            {!mobileMedia && (
+              <Button className={businessbtn} variant="contained">
+                Show Buisness
+              </Button>
+            )}
           </div>
-          <Typography
-            justifyContent="center"
-            textAlign="center"
-            display="flex"
-            variant="h3"
-            fontWeight="600"
-            className={header}
-          >
-            Consider Your Grocery Cravings Delivered!
-          </Typography>
+
+          <div className={mobileMedia ? mobHeader : firstHeader}>
+            <h1 className={titleOne}>Consider Your Grocery</h1>
+            <h1 className={titleTwo}> Cravings Delivered!</h1>
+          </div>
+
           <Typography
             textAlign="center"
             justifyContent="center"
