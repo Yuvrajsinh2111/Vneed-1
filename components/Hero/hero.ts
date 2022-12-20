@@ -70,10 +70,25 @@ export const titleOne = css({
   fontWeight: "600",
 });
 
+export const titleOneMob = css({
+  color: "gray",
+  textAlign: "center",
+  display: "flex",
+  fontSize: "30px",
+  fontWeight: "600",
+});
+
 export const titleTwo = css({
   paddingLeft: "10px",
   textAlign: "center",
   fontSize: "38px",
+  fontWeight: "600",
+});
+
+export const titleTwoMob = css({
+  paddingLeft: "10px",
+  textAlign: "center",
+  fontSize: "30px",
   fontWeight: "600",
 });
 

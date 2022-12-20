@@ -5,8 +5,14 @@ export const recipesCard = css({
   margin: "20px",
 });
 
+export const recipeImg = css({
+  display: "flex",
+  justifyContent: "center",
+});
+
 export const recipesImage = css({
-  display: "block",
+  display: "flex",
+  justifyContent: "center",
   maxWidth: "230px",
   minHeight: "250px",
 });
@@ -18,6 +24,6 @@ export const recipesText = css({
 
 export const recipe = css({
   marginTop: "50px",
-  display: "flex",
+  // display: "flex",
   justifyContent: "center",
 });

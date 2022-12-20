@@ -1,6 +1,13 @@
 import { Button, MenuItem, Select, useMediaQuery } from "@mui/material";
 import { useState } from "react";
-import { appLogo, authSection, logo, navSection, select } from "./nav";
+import {
+  appLogo,
+  authSection,
+  loginBtn,
+  logo,
+  navSection,
+  select,
+} from "./nav";
 import { navItemsData } from "./NavItems";
 
 const Navbar = () => {
@@ -44,7 +51,10 @@ const Navbar = () => {
           <MenuItem value={"en"}>English</MenuItem>
           <MenuItem value={"fr"}>French</MenuItem>
         </Select>
-        <Button sx={{ color: "#fff" }}>Login</Button>
+        <Button sx={{ color: "#fff" }}>Sign Up</Button>
+        <Button className={loginBtn} sx={{ color: "black" }}>
+          Login
+        </Button>
       </div>
     </nav>
   );

@@ -10,6 +10,7 @@ export const navSection = css({
 export const authSection = css({
   color: "white",
   display: "flex",
+  marginRight: "20px",
 });
 
 export const select = css({
@@ -24,4 +25,10 @@ export const logo = css({
   top: "15px",
   left: "25px",
   position: "relative",
+});
+
+export const loginBtn = css({
+  backgroundColor: "white",
+  height: "45px",
+  marginTop: "5px",
 });

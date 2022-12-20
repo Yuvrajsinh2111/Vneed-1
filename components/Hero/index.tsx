@@ -1,9 +1,7 @@
 import { Button, TextField, Typography, useMediaQuery } from "@mui/material";
-import { textAlign } from "@mui/system";
 
 import React from "react";
 import ReactGoogleAutocomplete from "react-google-autocomplete";
-import { block } from "../footer/footer";
 import {
   cardSection,
   hero,
@@ -17,9 +15,12 @@ import {
   titleOne,
   mobHeader,
   titleTwo,
+  titleTwoMob,
+  titleOneMob,
 } from "./hero";
 
 export const Hero = () => {
+  const mobileHeader = useMediaQuery("(max-width:1024px)");
   const mobileMedia = useMediaQuery("(max-width:768px)");
 
   // const homeData = heroData?.PostHeader[0];
@@ -49,8 +50,12 @@ export const Hero = () => {
           </div>
 
           <div className={mobileMedia ? mobHeader : firstHeader}>
-            <h1 className={titleOne}>Consider Your Grocery</h1>
-            <h1 className={titleTwo}> Cravings Delivered!</h1>
+            <h1 className={mobileHeader ? titleOneMob : titleOne}>
+              Consider Your Grocery
+            </h1>
+            <h1 className={mobileHeader ? titleTwoMob : titleTwo}>
+              Cravings Delivered!
+            </h1>
           </div>
 
           <Typography
