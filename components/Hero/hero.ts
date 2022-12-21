@@ -17,10 +17,8 @@ export const cardSection = css({
   padding: "80px",
 });
 
-export const cardSectionMobile = css({
-  background: "white",
-  width: "80%",
-  alignItems: "center",
+export const cardSectionMobile = css(cardSection, {
+  padding: "20px",
 });
 
 export const location = css({
@@ -29,15 +27,25 @@ export const location = css({
   alignItems: "center !important",
 });
 
-export const locationField = css({
-  width: "600px",
-  padding: "1rem",
+export const locationIcon = css({
+  maxheight: "40px",
+  width: "40px",
+  border: "none",
+  margin: "10px",
 });
 
 export const businessbtn = css({
   background: "black",
   height: "55px",
   margin: "1rem",
+  "&:hover": {
+    backgroundColor: "black",
+  },
+});
+
+export const locationField = css({
+  width: "600px",
+  padding: "1rem",
 });
 
 export const header = css({
@@ -47,13 +55,6 @@ export const header = css({
 export const subheader = css({
   marginTop: "-10px",
   color: "#585252",
-});
-
-export const locationIcon = css({
-  maxheight: "40px",
-  width: "40px",
-  border: "none",
-  margin: "10px",
 });
 
 export const firstHeader = css({
@@ -70,12 +71,8 @@ export const titleOne = css({
   fontWeight: "600",
 });
 
-export const titleOneMob = css({
-  color: "gray",
-  textAlign: "center",
-  display: "flex",
+export const titleOneMob = css(titleOne, {
   fontSize: "30px",
-  fontWeight: "600",
 });
 
 export const titleTwo = css({
@@ -85,11 +82,8 @@ export const titleTwo = css({
   fontWeight: "600",
 });
 
-export const titleTwoMob = css({
-  paddingLeft: "10px",
-  textAlign: "center",
+export const titleTwoMob = css(titleTwo, {
   fontSize: "30px",
-  fontWeight: "600",
 });
 
 export const mobHeader = css({

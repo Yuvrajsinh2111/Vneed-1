@@ -8,7 +8,6 @@ import {
   location,
   businessbtn,
   cardSectionMobile,
-  header,
   subheader,
   locationIcon,
   firstHeader,

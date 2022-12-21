@@ -31,4 +31,7 @@ export const loginBtn = css({
   backgroundColor: "white",
   height: "45px",
   marginTop: "5px",
+  "&:hover": {
+    backgroundColor: "white",
+  },
 });
