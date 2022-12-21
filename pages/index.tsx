@@ -5,7 +5,7 @@ import { OrederSection } from "../components/order-section";
 import Recipes from "../components/recipes";
 import QrSection from "../components/qrScanner-section";
 import YoutubeSection from "../components/youtube-section";
-import QuestionSection from "../components/accordion";
+import QuestionSection from "../components/question-section";
 import InquriesSection from "../components/inqurieSection";
 import { useMediaQuery } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";

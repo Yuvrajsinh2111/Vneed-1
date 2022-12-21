@@ -1,4 +1,4 @@
-import { Button, TextField, Typography, useMediaQuery } from "@mui/material";
+import { Button, Typography, useMediaQuery } from "@mui/material";
 
 import React from "react";
 import ReactGoogleAutocomplete from "react-google-autocomplete";
@@ -35,6 +35,7 @@ export const Hero = () => {
                 padding: "1rem",
                 border: "none",
                 background: "#F0EDEC",
+                color: "black",
               }}
               apiKey={"AIzaSyAWVOnWoimw6ipE83KqJqDxuAwbvKuAurk"} //Got this key from Admin panel
               onPlaceSelected={(place) => {

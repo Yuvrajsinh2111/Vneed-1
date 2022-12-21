@@ -40,8 +40,8 @@ const recipes = [
 ];
 
 var settings = {
-  dots: true,
-  infinite: false,
+  dots: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
@@ -54,7 +54,7 @@ var settings = {
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+        dots: false,
       },
     },
     {
@@ -102,38 +102,5 @@ export const Recipes = () => {
     </Container>
   );
 };
-
-{
-  /* <Grid
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-        >
-          {recipes.length > 0 &&
-            recipes.map(({ image, desc }) => (
-              <Grid
-                xs={12}
-                sm={6}
-                md={3}
-                lg={3}
-                justifyContent="center"
-                display="flex"
-              >
-                <div>
-                  <div>
-                    <img className={recipesImage} src={image} />
-                  </div>
-                  <div>
-                    <Typography className={recipesText} variant="h6">
-                      {desc}
-                    </Typography>
-                  </div>
-                </div>
-              </Grid>
-            ))}
-     </div>
-        </Grid> */
-}
 
 export default Recipes;

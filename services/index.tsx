@@ -30,3 +30,6 @@ export const getLandingPageData = async () => {
     return response.data.response;
   } catch {}
 };
+
+export const getData = async () =>
+  await axios.get("http://143.110.181.77:9044/users/getFeaturedRestaurantList");

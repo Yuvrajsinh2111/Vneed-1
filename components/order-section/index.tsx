@@ -48,7 +48,7 @@ export const OrederSection = () => {
             orderSectionData.map(({ description, image, name }: any) => (
               <Grid xs={12} sm={6} md={4} lg={4}>
                 <div className={orderCard}>
-                  <Card sx={{ maxWidth: 345, minHeight: 300 }}>
+                  <Card sx={{ maxWidth: 345, minHeight: 250 }}>
                     <CardActionArea>
                       <CardMedia
                         component="img"

@@ -34,7 +34,7 @@ export const vneedCard = css({
   margin: "1rem",
   maxHeight: "100px",
   backgroundColor: "#fff",
-  boxShadow: "0px 0px 30px #d2cece82 ",
+  boxShadow: "2px 2px 2px 2px #d2cece82;",
   borderRadius: "6px",
   alignItems: "center",
 });

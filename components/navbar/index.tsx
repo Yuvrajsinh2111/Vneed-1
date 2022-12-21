@@ -5,6 +5,8 @@ import {
   authSection,
   loginBtn,
   logo,
+  navItems,
+  navItemsMob,
   navSection,
   select,
 } from "./nav";
@@ -16,6 +18,7 @@ const Navbar = () => {
     setSelectedLang(e.target.value);
   };
   const mobileMedia = useMediaQuery("(max-width:768px)");
+  const navMobMedia = useMediaQuery("(max-width:1024px)");
 
   return mobileMedia ? (
     <nav className={navSection}>
@@ -35,16 +38,19 @@ const Navbar = () => {
 
       <div>
         {navItemsData.map(({ title }) => (
-          <Button sx={{ color: "#fff", padding: "30px" }}>{title}</Button>
+          <Button className={navMobMedia ? navItemsMob : navItems}>
+            {title}
+          </Button>
         ))}
       </div>
       <div className={authSection}>
         <img
-          src="/images/lang-icon.png"
-          width="10px"
-          height="10px"
+          src="	https://cdn.iconscout.com/icon/free/png-256/global-293-453260.png"
+          width="25px"
+          height="25px"
           color="#fff"
           alt="lang-icon"
+          style={{ alignItems: "center" }}
         />
         <Select
           labelId="demo-simple-select-label"

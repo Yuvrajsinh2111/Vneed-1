@@ -1,6 +1,6 @@
 import { Container, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
-import { question } from "../accordion/question";
+import { question } from "../question-section/question";
 import YoutubeSection from "../youtube-section";
 import { blockSection, youtubeSection } from "../youtube-section/yotube";
 import { appimage, block, reachout, reachouttext } from "./inquire";

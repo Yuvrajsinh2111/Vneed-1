@@ -28,6 +28,12 @@ a {
 }
 
 .MuiDivider-root {
-  background: white !important;
-  height: 1px !important;
+  background: #393131 !important;
+  height: 0px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+  /* font-size: 32px; */
 }

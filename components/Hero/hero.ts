@@ -14,7 +14,7 @@ export const cardSection = css({
   background: "white",
   width: "80%",
   alignItems: "center",
-  padding: "80px",
+  padding: "35px",
 });
 
 export const cardSectionMobile = css(cardSection, {

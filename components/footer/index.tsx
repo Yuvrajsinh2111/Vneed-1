@@ -9,6 +9,7 @@ import React from "react";
 import { appimage, reachout } from "../inqurieSection/inquire";
 import { navItemsData } from "../navbar/NavItems";
 import {
+  appLogo,
   block,
   company,
   copyright,
@@ -35,12 +36,9 @@ export const Footer = () => {
                 <Typography color="white" variant="h5" fontWeight="600">
                   Get The App
                 </Typography>
-                <Typography variant="h6" color="white" fontWeight="400">
-                  User App
-                </Typography>
               </div>
               <div>
-                <div className={mobileMedia ? block : reachout}>
+                <div className={mobileMedia ? block : appLogo}>
                   <div>
                     <img className={footerAppImage} src="/images/play.png" />
                   </div>
@@ -83,11 +81,6 @@ export const Footer = () => {
           </div>
           <div className={mobileMedia ? mobcompany : company}>
             <div>
-              <Typography variant="h5" color="white" fontWeight="600">
-                Company
-              </Typography>
-            </div>
-            <div>
               <>
                 {label.map(({ title }) => (
                   <Button className={footerlink} sx={{ color: "#fff" }}>
@@ -97,8 +90,11 @@ export const Footer = () => {
               </>
             </div>
           </div>
-          <Divider />
+        </Container>
+        <Divider />
+        <Container>
           <div className={copyright}>Copyright © 2022 Vneed.</div>
+          <div className={copyright}>TERMS AND CONDITION | PRIVACY POLICY</div>
         </Container>
       </div>
     </>

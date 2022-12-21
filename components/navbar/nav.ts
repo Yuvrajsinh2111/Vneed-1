@@ -11,6 +11,7 @@ export const authSection = css({
   color: "white",
   display: "flex",
   marginRight: "20px",
+  alignItems: "center",
 });
 
 export const select = css({
@@ -27,10 +28,19 @@ export const logo = css({
   position: "relative",
 });
 
+export const navItems = css({
+  padding: "30px",
+  color: "#ffff",
+});
+
+export const navItemsMob = css(navItems, {
+  padding: "12px",
+});
+
 export const loginBtn = css({
   backgroundColor: "white",
   height: "35px",
-  marginTop: "8px",
+  marginLeft: "10px",
   "&:hover": {
     backgroundColor: "white",
   },

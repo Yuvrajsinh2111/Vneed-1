@@ -22,14 +22,19 @@ export const footerAppImage = css({
   display: "block",
   maxWidth: "300px",
   maxHeight: "40px",
-  margin: "10px 4px",
-  padding: "0px",
+  margin: "10px 10px",
 });
 
 export const section = css({
   marginTop: "55px",
-  marginLeft: "50px",
-  padding: "20px",
+  padding: "40px",
+  // marginLeft: "30px",
+});
+
+export const appLogo = css({
+  display: "flex",
+  marginTop: "40px",
+  marginLeft: "-10px",
 });
 
 export const Mobilesection = css({
@@ -43,14 +48,15 @@ export const footerlink = css({
 });
 
 export const copyright = css({
+  marginLeft: "25px",
   color: "white",
   display: "flex",
-  justifyContent: "center",
-  padding: "24px 0",
+  justifyContent: "left",
+  padding: "10px 0",
 });
 
 export const company = css({
-  marginLeft: "70px",
+  marginLeft: "10px",
 });
 
 export const mobcompany = css({
