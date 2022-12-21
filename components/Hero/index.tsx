@@ -30,7 +30,12 @@ export const Hero = () => {
         <div className={mobileMedia ? cardSectionMobile : cardSection}>
           <div className={location}>
             <ReactGoogleAutocomplete
-              style={{ width: "600px", padding: "1rem", border: "none" }}
+              style={{
+                width: "600px",
+                padding: "1rem",
+                border: "none",
+                background: "#F0EDEC",
+              }}
               apiKey={"AIzaSyAWVOnWoimw6ipE83KqJqDxuAwbvKuAurk"} //Got this key from Admin panel
               onPlaceSelected={(place) => {
                 console.log(place);
@@ -38,7 +43,7 @@ export const Hero = () => {
             />
             <img
               className={locationIcon}
-              src="/images/location.png"
+              src="/images/target.png"
               alt="location-icon"
             />
             {!mobileMedia && (

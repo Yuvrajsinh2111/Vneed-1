@@ -29,8 +29,8 @@ export const logo = css({
 
 export const loginBtn = css({
   backgroundColor: "white",
-  height: "45px",
-  marginTop: "5px",
+  height: "35px",
+  marginTop: "8px",
   "&:hover": {
     backgroundColor: "white",
   },

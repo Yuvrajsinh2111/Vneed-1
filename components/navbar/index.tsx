@@ -28,17 +28,24 @@ const Navbar = () => {
           className={logo}
           src="/images/VneedLogo.png"
           alt="logo"
-          height="65"
-          width="80"
+          height="60"
+          width="60"
         />
       </div>
 
       <div>
         {navItemsData.map(({ title }) => (
-          <Button sx={{ color: "#fff" }}>{title}</Button>
+          <Button sx={{ color: "#fff", padding: "30px" }}>{title}</Button>
         ))}
       </div>
       <div className={authSection}>
+        <img
+          src="/images/lang-icon.png"
+          width="10px"
+          height="10px"
+          color="#fff"
+          alt="lang-icon"
+        />
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -48,8 +55,8 @@ const Navbar = () => {
           color="primary"
           className={select}
         >
-          <MenuItem value={"en"}>English</MenuItem>
-          <MenuItem value={"fr"}>French</MenuItem>
+          <MenuItem value={"en"}>EN</MenuItem>
+          <MenuItem value={"fr"}>FR</MenuItem>
         </Select>
         <Button sx={{ color: "#fff" }}>Sign Up</Button>
         <Button className={loginBtn} sx={{ color: "black" }}>

@@ -5,9 +5,9 @@ export interface NavItems {
 }
 
 export const navItemsData: NavItems[] = [
-  {
-    title: "Home",
-  },
+  // {
+  //   title: "Home",
+  // },
   {
     title: "About",
   },
