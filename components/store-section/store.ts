@@ -22,7 +22,7 @@ export const cardText = css({
 
 export const cirLogo = css({
   padding: "10px",
-  width: "70px",
+  width: "80px",
   height: "80px",
   borderRadius: "50px",
   background: "#fff",
@@ -30,7 +30,8 @@ export const cirLogo = css({
 
 export const vneedCard = css({
   display: "flex",
-  width: "350px",
+  minWidth: "350px",
+  maxWidth: "350px",
   margin: "1rem",
   maxHeight: "100px",
   backgroundColor: "#fff",

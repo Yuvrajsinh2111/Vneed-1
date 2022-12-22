@@ -45,3 +45,12 @@ export const loginBtn = css({
     backgroundColor: "white",
   },
 });
+
+export const lang = css({
+  display: "flex",
+  justifyContent: "center",
+  background: "#393131",
+  alignItems: "center",
+  borderRadius: "10px",
+  height: "40px",
+});

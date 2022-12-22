@@ -1,5 +1,5 @@
 import { Container, Grid, Typography } from "@mui/material";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { getData } from "../../services";
 import {
   cardText,
@@ -10,65 +10,36 @@ import {
   vneedCard,
 } from "./store";
 
-const card = [
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-  {
-    companyName: "Costco",
-    type: "Groceries • Wholesale",
-    method: "Delivery",
-  },
-];
+// const card = [
+//   {
+//     restaurantname: "Costco",
+//     delivery_time: "Delivery",
+//   },
+// ];
 
 export const StoreinArea = () => {
   // for API CALL
 
-  // const getStoreData = useCallback(async () => {
-  //   const getStore = await getData();
-  //   console.log("get", getStore);
-  // }, []);
+  const [data, setData] = useState<any>();
 
-  // useEffect(() => {
-  //   getStoreData();
-  // }, [getStoreData]);
+  const getStoreData = useCallback(async () => {
+    try {
+      const getStore = await getData();
+      setData(getStore);
+    } catch {
+      //Error handling
+    }
+  }, []);
+
+  useEffect(() => {
+    getStoreData();
+  }, [getStoreData]);
+
+  // console.log("data", data?.data?.rest_list);
+
+  const shops = data?.data?.rest_list;
+
+  console.log("shops", shops);
 
   return (
     <>
@@ -87,19 +58,22 @@ export const StoreinArea = () => {
                 justifyContent="center"
                 alignItems="center"
               >
-                {card.length > 0 &&
-                  card.map(({ companyName, type, method }) => (
+                {shops?.length > 0 &&
+                  shops?.map(({ logo, restaurantname, delivery_time }: any) => (
                     <Grid
                       container
                       xs={12}
                       sm={6}
                       md={4}
-                      lg={4}
+                      lg={6}
                       justifyContent="center"
                     >
                       <div className={vneedCard}>
-                        <div className={cirLogo}>
-                          <img src="/images/costco-store.png"></img>
+                        <div>
+                          <img
+                            className={cirLogo}
+                            src={"https://www.ssviandx.com/" + logo}
+                          ></img>
                         </div>
                         <div className={cardText}>
                           <Typography
@@ -107,12 +81,14 @@ export const StoreinArea = () => {
                             fontSize="20px"
                             fontWeight="600"
                           >
-                            {companyName}
+                            {restaurantname}
                           </Typography>
                           <Typography color="#585252" fontSize="15px">
-                            {type}
+                            Groceries • Wholesale
                           </Typography>
-                          <Typography fontSize="15px">{method}</Typography>
+                          <Typography fontSize="15px">
+                            {delivery_time}
+                          </Typography>
                         </div>
                       </div>
                     </Grid>

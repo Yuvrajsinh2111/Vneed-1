@@ -37,3 +37,7 @@ a {
   color: black;
   /* font-size: 32px; */
 }
+
+.MuiOutlinedInput-notchedOutline {
+  border: none !important ;
+}

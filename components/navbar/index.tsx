@@ -9,6 +9,7 @@ import {
   navItemsMob,
   navSection,
   select,
+  lang,
 } from "./nav";
 import { navItemsData } from "./NavItems";
 
@@ -44,26 +45,29 @@ const Navbar = () => {
         ))}
       </div>
       <div className={authSection}>
-        <img
-          src="	https://cdn.iconscout.com/icon/free/png-256/global-293-453260.png"
-          width="25px"
-          height="25px"
-          color="#fff"
-          alt="lang-icon"
-          style={{ alignItems: "center" }}
-        />
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={selectedLang}
-          label="language"
-          onChange={handleChange}
-          color="primary"
-          className={select}
-        >
-          <MenuItem value={"en"}>EN</MenuItem>
-          <MenuItem value={"fr"}>FR</MenuItem>
-        </Select>
+        <div className={lang}>
+          <img
+            src="	https://cdn.iconscout.com/icon/free/png-256/global-293-453260.png"
+            width="25px"
+            height="25px"
+            color="#fff"
+            alt="lang-icon"
+            style={{ alignItems: "center" }}
+          />
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={selectedLang}
+            label="language"
+            onChange={handleChange}
+            color="primary"
+            className={select}
+          >
+            <MenuItem value={"en"}>EN</MenuItem>
+            <MenuItem value={"fr"}>FR</MenuItem>
+          </Select>
+        </div>
+
         <Button sx={{ color: "#fff" }}>Sign Up</Button>
         <Button className={loginBtn} sx={{ color: "black" }}>
           Login

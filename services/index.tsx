@@ -32,4 +32,12 @@ export const getLandingPageData = async () => {
 };
 
 export const getData = async () =>
-  await axios.get("http://143.110.181.77:9044/users/getFeaturedRestaurantList");
+  await axios({
+    method: "post",
+    url: "https://www.ssviandx.com/mobile/users/getFeaturedRestaurantList",
+    headers: {},
+    data: {
+      latitude: 28.5355,
+      longitude: 77.391,
+    },
+  });
