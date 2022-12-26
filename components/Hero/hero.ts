@@ -90,3 +90,11 @@ export const mobHeader = css({
   display: "block",
   justifyContent: "center",
 });
+
+export const inputFiled = css({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center !important",
+  background: "#F0EDEC",
+  width: "60%",
+});

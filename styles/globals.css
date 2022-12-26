@@ -41,3 +41,7 @@ a {
 .MuiOutlinedInput-notchedOutline {
   border: none !important ;
 }
+
+input:focus {
+  outline: none;
+}

@@ -16,6 +16,7 @@ import {
   titleTwo,
   titleTwoMob,
   titleOneMob,
+  inputFiled,
 } from "./hero";
 
 export const Hero = () => {
@@ -29,24 +30,26 @@ export const Hero = () => {
       <div className={hero}>
         <div className={mobileMedia ? cardSectionMobile : cardSection}>
           <div className={location}>
-            <ReactGoogleAutocomplete
-              style={{
-                width: "600px",
-                padding: "1rem",
-                border: "none",
-                background: "#F0EDEC",
-                color: "black",
-              }}
-              apiKey={"AIzaSyAWVOnWoimw6ipE83KqJqDxuAwbvKuAurk"} //Got this key from Admin panel
-              onPlaceSelected={(place) => {
-                console.log(place);
-              }}
-            />
-            <img
-              className={locationIcon}
-              src="/images/target.png"
-              alt="location-icon"
-            />
+            <div className={inputFiled}>
+              <ReactGoogleAutocomplete
+                style={{
+                  width: "600px",
+                  padding: "1rem",
+                  border: "none",
+                  background: "#F0EDEC",
+                  color: "black",
+                }}
+                apiKey={"AIzaSyAWVOnWoimw6ipE83KqJqDxuAwbvKuAurk"} //Got this key from Admin panel
+                onPlaceSelected={(place) => {
+                  console.log(place);
+                }}
+              />
+              <img
+                className={locationIcon}
+                src="/images/target.png"
+                alt="location-icon"
+              />
+            </div>
             {!mobileMedia && (
               <Button className={businessbtn} variant="contained">
                 Show Buisness
