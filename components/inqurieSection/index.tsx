@@ -26,12 +26,12 @@ export const InquriesSection = () => {
                 specials offers and hot deals
               </div>
               <div className={mobileMedia ? block : reachout}>
-                <div>
+                <a href="https://play.google.com/store/apps">
                   <img className={appimage} src="/images/play.png" />
-                </div>
-                <div>
+                </a>
+                <a href="https://www.apple.com/iphone/">
                   <img className={appimage} src="/images/appstore.png" />
-                </div>
+                </a>
               </div>
             </div>
             <div>
