@@ -98,3 +98,11 @@ export const inputFiled = css({
   background: "#F0EDEC",
   width: "60%",
 });
+
+export const inputFiledMob = css({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center !important",
+  background: "none",
+  width: "60%",
+});

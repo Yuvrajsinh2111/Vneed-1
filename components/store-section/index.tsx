@@ -37,9 +37,11 @@ export const StoreinArea = () => {
 
   // console.log("data", data?.data?.rest_list);
 
-  const shops = data?.data?.rest_list;
+  // const shops = data?.data?.rest_list;
 
-  console.log("shops", shops);
+  const shops = data?.data;
+
+  console.log("shops", data?.data);
 
   return (
     <>
@@ -52,22 +54,10 @@ export const StoreinArea = () => {
         <div className={storesec}>
           <div>
             <Container>
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-              >
+              <Grid container direction="row" alignItems="center">
                 {shops?.length > 0 &&
-                  shops?.map(({ logo, restaurantname, delivery_time }: any) => (
-                    <Grid
-                      container
-                      xs={12}
-                      sm={6}
-                      md={6}
-                      lg={6}
-                      justifyContent="center"
-                    >
+                  shops?.map(({ logo, restaurantname, avg_delivery }: any) => (
+                    <Grid container xs={12} sm={6} md={6} lg={4}>
                       <div className={vneedCard}>
                         <div>
                           <img
@@ -87,7 +77,7 @@ export const StoreinArea = () => {
                             Groceries • Wholesale
                           </Typography>
                           <Typography fontSize="15px">
-                            {delivery_time}
+                            {avg_delivery}
                           </Typography>
                         </div>
                       </div>

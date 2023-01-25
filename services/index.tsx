@@ -34,10 +34,10 @@ export const getLandingPageData = async () => {
 export const getData = async () =>
   await axios({
     method: "post",
-    url: "https://www.ssviandx.com/mobile/users/getFeaturedRestaurantList",
+    url: "http://localhost:9044/mobile/users/getFeaturedRestaurantList",
     headers: {},
-    data: {
-      latitude: 28.5355,
-      longitude: 77.391,
-    },
+    // data: {
+    //   latitude: 28.5355,
+    //   longitude: 77.391,
+    // },
   });

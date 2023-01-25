@@ -43,8 +43,14 @@ export const Mobilesection = css({
   padding: "0px",
 });
 
+export const footerLinkSection = css({
+  marginBottom: "20px",
+});
+
 export const footerlink = css({
   padding: "20px",
+  color: "#fff",
+  fontSize: "18px",
 });
 
 export const copyright = css({

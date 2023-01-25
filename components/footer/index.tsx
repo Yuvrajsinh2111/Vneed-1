@@ -20,6 +20,7 @@ import {
   mobcompany,
   Mobilesection,
   section,
+  footerLinkSection,
 } from "./footer";
 
 export const Footer = () => {
@@ -80,12 +81,12 @@ export const Footer = () => {
             </div>
           </div>
           <div className={mobileMedia ? mobcompany : company}>
-            <div>
+            <div className={footerLinkSection}>
               <>
-                {label.map(({ title }) => (
-                  <Button className={footerlink} sx={{ color: "#fff" }}>
+                {label.map(({ title, link }) => (
+                  <a href={link} className={footerlink}>
                     {title}
-                  </Button>
+                  </a>
                 ))}
               </>
             </div>

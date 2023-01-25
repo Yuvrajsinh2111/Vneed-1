@@ -15,3 +15,19 @@ export const order = css({
 export const orderImage = css({
   maxHeight: "170px",
 });
+
+export const card = css({
+  backgroundColor: "white",
+  opacity: "80%",
+  marginTop: "110px",
+  display: "flex",
+  textAlign: "center",
+  position: "absolute",
+  maxHeight: "600px",
+  padding: "10px",
+  minHeight: "200px",
+  maxWidth: "350px",
+  justifyContent: "center",
+  // backgroundSize: "cover",
+  // maxWidth: "350px",
+});

@@ -38,10 +38,10 @@ const Navbar = () => {
       </div>
 
       <div>
-        {navItemsData.map(({ title }) => (
-          <Button className={navMobMedia ? navItemsMob : navItems}>
+        {navItemsData.map(({ title, link }) => (
+          <a href={link} className={navMobMedia ? navItemsMob : navItems}>
             {title}
-          </Button>
+          </a>
         ))}
       </div>
       <div className={authSection}>

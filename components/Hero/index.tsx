@@ -17,6 +17,7 @@ import {
   titleTwoMob,
   titleOneMob,
   inputFiled,
+  inputFiledMob,
 } from "./hero";
 
 export const Hero = () => {
@@ -30,7 +31,7 @@ export const Hero = () => {
       <div className={hero}>
         <div className={mobileMedia ? cardSectionMobile : cardSection}>
           <div className={location}>
-            <div className={inputFiled}>
+            <div className={mobileMedia ? inputFiledMob : inputFiled}>
               <ReactGoogleAutocomplete
                 style={{
                   width: "600px",
