@@ -52,15 +52,15 @@ export const YoutubeSection = () => {
               </div>
               <div>
                 <div className={reachout}>
-                  <div>
+                  <a href="https://play.google.com/store/apps">
                     <img className={footerAppImage} src="/images/play.png" />
-                  </div>
-                  <div>
+                  </a>
+                  <a href="https://www.apple.com/iphone/">
                     <img
                       className={footerAppImage}
                       src="/images/appstore.png"
                     />
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
